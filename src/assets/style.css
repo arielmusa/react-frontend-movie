@@ -1,0 +1,10 @@
+body {
+  background-color: rgb(17, 9, 9);
+  color: white;
+  font-family: monospace;
+}
+
+.btn-primary {
+  background-color: brown;
+  border-color: brown;
+}
