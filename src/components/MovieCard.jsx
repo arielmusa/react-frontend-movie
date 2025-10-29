@@ -1,5 +1,7 @@
+import { NavLink } from "react-router";
+
 export default function MovieCard(movie) {
-  const { title, description, director, genre } = movie;
+  const { title, description, director, genre, id } = movie;
   return (
     <>
       <div className="card h-100">
@@ -12,9 +14,9 @@ export default function MovieCard(movie) {
             <p>{director}</p>
           </div>
           <div>
-            <a href="#" className="btn btn-primary">
-              Watch now
-            </a>
+            <NavLink to={`/movies/${id}`} className="btn btn-primary">
+              More info
+            </NavLink>
           </div>
         </div>
       </div>
