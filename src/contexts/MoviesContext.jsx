@@ -7,16 +7,35 @@ const apiUri = import.meta.env.VITE_API_URI;
 
 function MoviesProvider({ children }) {
   const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   function fetchMovies() {
-    axios.get(`${apiUri}/api/movies`).then((res) => {
-      setMovies(res.data);
-    });
+    setIsLoading(true);
+    return axios
+      .get(`${apiUri}/api/movies`)
+      .then((res) => {
+        setMovies(res.data);
+      })
+      .catch((err) => console.error(err))
+      .then(() => setIsLoading(false));
   }
 
-  useEffect(() => fetchMovies, []);
+  const storeReview = (review) => {
+    return axios.post(`${apiUri}/api/reviews`, review);
+  };
 
-  const data = { movies, setMovies };
+  useEffect(() => {
+    fetchMovies();
+  }, []);
+
+  const data = {
+    movies,
+    setMovies,
+    storeReview,
+    isLoading,
+    setIsLoading,
+    fetchMovies,
+  };
 
   return <Movies.Provider value={data}>{children}</Movies.Provider>;
 }
