@@ -1,10 +1,48 @@
 body {
   background-color: rgb(17, 9, 9);
   color: white;
-  font-family: monospace;
+}
+
+.logo {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.hero {
+  height: 300px;
+  background-color: white;
+  color: black;
+  border-radius: 16px;
+  padding-left: 16px;
+  margin: 0 auto;
+  margin-top: 32px;
+  box-shadow: brown 0px 24px 55px, brown 0px -12px 30px, brown 0px 4px 6px,
+    brown 0px 12px 13px, brown 0px -3px 5px;
+}
+
+.hero .movie-info {
+  padding-top: 8px;
+}
+
+.movie-categories .badge:hover {
+  cursor: pointer;
 }
 
 .btn-primary {
   background-color: brown;
   border-color: brown;
+}
+
+.btn-primary:hover {
+  background-color: brown;
+  border-color: brown;
+}
+
+.text-bg-primary {
+  background-color: brown !important;
+}
+
+.card:hover {
+  box-shadow: brown 0px 24px 55px, brown 0px -12px 30px, brown 0px 4px 6px,
+    brown 0px 12px 13px, brown 0px -3px 5px;
 }
