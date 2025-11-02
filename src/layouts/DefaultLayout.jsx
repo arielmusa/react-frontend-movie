@@ -1,9 +1,11 @@
-import { Outlet } from "react-router";
+import { NavLink, Outlet } from "react-router";
 
 export default function DefaultLayout() {
   return (
     <>
-      <h1 className="logo">MOVIEHUB</h1>
+      <NavLink className={"link"} to={"/"}>
+        <h1 className="logo">MOVIEHUB</h1>
+      </NavLink>
       <Outlet />
     </>
   );
