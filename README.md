@@ -24,7 +24,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd moviehub-frontend
 ```
 
 Run the project
